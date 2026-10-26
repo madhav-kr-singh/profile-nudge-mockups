@@ -1989,6 +1989,872 @@
         .rule.good {
             color: #0b6e4f
         }
+
+        /* Top bar: Plan / Mockup switch */
+
+        .headr {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .views {
+            display: flex;
+            gap: 4px;
+            padding: 4px;
+            border-radius: 12px;
+            background: #e2e9e5
+        }
+
+        .views button {
+            min-height: 40px;
+            padding: 0 20px;
+            border: 0;
+            border-radius: 9px;
+            background: transparent;
+            color: #3e4a45;
+            font-size: 14px;
+            font-weight: 700
+        }
+
+        .views button.on {
+            background: #fff;
+            color: #0b6e4f;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .12)
+        }
+
+        /* Plan view */
+
+        .p-doc {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 8px 0 40px;
+            color: #1b1f1d
+        }
+
+        .p-kicker {
+            margin: 8px 0 0;
+            color: #0b6e4f;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .12em
+        }
+
+        .p-title {
+            margin: 6px 0 8px;
+            font-size: clamp(24px, 3vw, 34px);
+            line-height: 1.2;
+            letter-spacing: -.03em;
+            font-weight: 800
+        }
+
+        .p-meta {
+            margin: 0 0 16px;
+            color: #4d5752;
+            font-size: 14px
+        }
+
+        .p-meta a {
+            color: #0066cc;
+            font-weight: 700
+        }
+
+        .p-toc {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+
+        .p-toc a {
+            padding: 8px 12px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: #fff;
+            color: #264b3a;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700
+        }
+
+        .p-sec {
+            margin-top: 24px;
+            padding: 24px;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            scroll-margin-top: 100px
+        }
+
+        .p-sec h2 {
+            margin: 0 0 12px;
+            font-size: 22px;
+            line-height: 1.25;
+            letter-spacing: -.02em
+        }
+
+        .p-sec h3 {
+            margin: 28px 0 10px;
+            font-size: 17px;
+            scroll-margin-top: 100px
+        }
+
+        .p-sec p {
+            margin: 0 0 12px;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #2b3430
+        }
+
+        .p-sec code {
+            font-family: Consolas, "Cascadia Mono", monospace;
+            font-size: 13px;
+            background: #eef2ef;
+            border: 1px solid #dde4df;
+            border-radius: 6px;
+            padding: 1px 6px
+        }
+
+        .p-tw {
+            overflow-x: auto;
+            margin: 12px 0 16px;
+            border: 1px solid var(--line);
+            border-radius: 12px
+        }
+
+        .p-tbl {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            line-height: 1.5
+        }
+
+        .p-tbl th {
+            padding: 10px 14px;
+            background: #f1f5f2;
+            border-bottom: 1px solid var(--line);
+            text-align: left;
+            font-size: 12px;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            color: #4d5752;
+            white-space: nowrap
+        }
+
+        .p-tbl td {
+            padding: 12px 14px;
+            border-bottom: 1px solid #e6ebe8;
+            vertical-align: top
+        }
+
+        .p-tbl tr:last-child td {
+            border-bottom: 0
+        }
+
+        .p-tbl .bdg {
+            vertical-align: middle
+        }
+
+        .p-yn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: 700;
+            white-space: nowrap
+        }
+
+        .p-yn.p-y {
+            color: #0b6e4f
+        }
+
+        .p-yn.p-n {
+            color: #b3360b
+        }
+
+        /* Flow charts: parent box, branches, arrows */
+
+        .p-tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 16px 0 12px;
+            padding: 24px 20px;
+            background: #f6f8f7;
+            border: 1px solid #e1e8e4;
+            border-radius: 14px
+        }
+
+        .p-node {
+            width: 100%;
+            max-width: 360px;
+            padding: 10px 14px;
+            background: #fff;
+            border: 1.5px solid #c9d6ce;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.45
+        }
+
+        .p-node b {
+            display: block
+        }
+
+        .p-node small {
+            display: block;
+            color: #4d5752;
+            font-size: 13px
+        }
+
+        .p-node.root {
+            max-width: 300px;
+            background: #0b6e4f;
+            border-color: #0b6e4f;
+            color: #fff
+        }
+
+        .p-node.root small {
+            color: #d7efe4
+        }
+
+        .p-node.yes {
+            background: #e3f1ea;
+            border-color: #8fc1a8
+        }
+
+        .p-node.no {
+            background: #fff4e0;
+            border-color: #e8c77a
+        }
+
+        .p-node.ask {
+            background: #eaf3ff;
+            border-color: #9cc4f0
+        }
+
+        .p-node.show {
+            border: 2px solid #0b6e4f
+        }
+
+        .p-tag {
+            display: inline-block;
+            margin-bottom: 4px;
+            padding: 2px 8px;
+            border-radius: 6px;
+            background: #e3f1ea;
+            color: #0b6e4f;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .08em
+        }
+
+        .p-brs {
+            position: relative;
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            margin-top: 14px
+        }
+
+        .p-brs::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -14px;
+            height: 14px;
+            border-left: 2px solid #9fb8aa
+        }
+
+        .p-br {
+            position: relative;
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 16px
+        }
+
+        .p-br::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 16px;
+            border-left: 2px solid #9fb8aa
+        }
+
+        .p-br::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -10px;
+            right: -10px;
+            border-top: 2px solid #9fb8aa
+        }
+
+        .p-br:first-child::after {
+            left: 50%
+        }
+
+        .p-br:last-child::after {
+            right: 50%
+        }
+
+        .p-down {
+            position: relative;
+            width: 2px;
+            height: 18px;
+            margin-bottom: 7px;
+            background: #9fb8aa
+        }
+
+        .p-down::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -7px;
+            transform: translateX(-50%);
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 7px solid #9fb8aa
+        }
+
+        .p-steps {
+            margin: 0;
+            padding: 4px 14px;
+            list-style: none;
+            text-align: left;
+            counter-reset: s
+        }
+
+        .p-steps li {
+            position: relative;
+            padding: 9px 0 9px 34px;
+            border-bottom: 1px solid #e6ebe8
+        }
+
+        .p-steps li:last-child {
+            border-bottom: 0
+        }
+
+        .p-steps li:not(.p-if) {
+            counter-increment: s
+        }
+
+        .p-steps li:not(.p-if)::before {
+            content: counter(s);
+            position: absolute;
+            left: 0;
+            top: 9px;
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+            background: #e3f1ea;
+            color: #0b6e4f;
+            display: grid;
+            place-items: center;
+            font-size: 12px;
+            font-weight: 800
+        }
+
+        .p-steps li.p-if {
+            padding-left: 0;
+            color: #8a5300;
+            font-weight: 600
+        }
+
+        .p-goto {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            min-height: 40px;
+            margin: 4px 0 4px;
+            padding: 0 14px;
+            border: 1px solid #a9bbb1;
+            border-radius: 10px;
+            background: #fff;
+            color: #0b6e4f;
+            font-size: 13px;
+            font-weight: 700
+        }
+
+        .p-goto:hover {
+            background: #f0f5f2
+        }
+
+        /* Widening circles */
+
+        .p-rings {
+            position: relative;
+            margin: 16px 0;
+            padding: 0;
+            list-style: none
+        }
+
+        .p-rings::before {
+            content: "";
+            position: absolute;
+            left: 21px;
+            top: 26px;
+            bottom: 26px;
+            width: 2px;
+            background: #c9d6ce
+        }
+
+        .p-rings li {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 6px 0
+        }
+
+        .p-ring {
+            position: relative;
+            z-index: 1;
+            flex: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: #0b6e4f;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 800;
+            box-shadow: 0 0 0 4px #fff
+        }
+
+        .p-rings li.r .p-ring {
+            background: #0066cc
+        }
+
+        .p-rings li>div {
+            flex: 1;
+            padding: 10px 14px;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            font-size: 14px;
+            line-height: 1.45
+        }
+
+        .p-rings small {
+            display: block;
+            color: #4d5752;
+            font-size: 13px
+        }
+
+        .p-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 4px 0 0
+        }
+
+        /* Nothing fits: acknowledgement box */
+
+        .p-ackwrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin: 16px 0 12px;
+            padding: 24px 20px;
+            background: #f6f8f7;
+            border: 1px solid #e1e8e4;
+            border-radius: 14px
+        }
+
+        .p-ack {
+            width: 100%;
+            max-width: 360px;
+            padding: 20px 16px;
+            background: #fff;
+            border: 1px solid #d5dcd7;
+            border-radius: 16px
+        }
+
+        .p-ack-i {
+            width: 44px;
+            height: 44px;
+            border-radius: 22px;
+            background: #e3f1ea;
+            color: #0b6e4f;
+            display: grid;
+            place-items: center
+        }
+
+        .p-ack p {
+            margin: 4px 0 0;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #3e4a45
+        }
+
+        .p-ack .p-ack-t {
+            margin: 10px 0 4px;
+            font-size: 19px;
+            font-weight: 800;
+            color: #1b1f1d
+        }
+
+        .p-ack-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 46px;
+            margin-top: 14px;
+            padding: 0 12px;
+            border-radius: 10px;
+            background: #0b6e4f;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center
+        }
+
+        .p-ack-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 10px;
+            color: #0066cc;
+            font-size: 14px;
+            font-weight: 700
+        }
+
+        .p-sec .p-then {
+            margin: 0;
+            color: #4d5752;
+            font-size: 14px;
+            font-weight: 600
+        }
+
+        /* Numbered lists: rules and decisions */
+
+        .p-ol {
+            margin: 12px 0 0;
+            padding: 0;
+            list-style: none;
+            counter-reset: o
+        }
+
+        .p-ol li {
+            position: relative;
+            margin-top: 8px;
+            padding: 12px 14px 12px 52px;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            font-size: 15px;
+            line-height: 1.55;
+            counter-increment: o
+        }
+
+        .p-ol li::before {
+            content: counter(o);
+            position: absolute;
+            left: 14px;
+            top: 12px;
+            width: 26px;
+            height: 26px;
+            border-radius: 13px;
+            background: #e6f4ee;
+            color: #0b6e4f;
+            display: grid;
+            place-items: center;
+            font-size: 13px;
+            font-weight: 800
+        }
+
+        .p-ol .bdg {
+            vertical-align: middle;
+            margin: 2px 0
+        }
+
+        @media(max-width:760px) {
+            .p-sec {
+                padding: 16px
+            }
+
+            .p-brs {
+                flex-direction: column;
+                gap: 24px
+            }
+
+            .p-brs::before,
+            .p-br::before,
+            .p-br::after {
+                display: none
+            }
+
+            .p-br {
+                padding-top: 0
+            }
+        }
+
+        .views button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px
+        }
+
+        /* Plan dark mode (the mockup stays light) */
+
+        body.dark {
+            color-scheme: dark;
+            background: #191919;
+            color: #ececec
+        }
+
+        body.dark .head {
+            background: #191919f2;
+            border-color: #333333
+        }
+
+        body.dark .eyebrow,
+        body.dark .p-kicker {
+            color: #6fd3a6
+        }
+
+        body.dark .sub,
+        body.dark .p-meta {
+            color: #a8a8a8
+        }
+
+        body.dark .views {
+            background: #262626
+        }
+
+        body.dark .views button {
+            color: #a8a8a8
+        }
+
+        body.dark .views button.on {
+            background: #383838;
+            color: #ececec;
+            box-shadow: none
+        }
+
+        body.dark .p-doc {
+            color: #ececec
+        }
+
+        body.dark .p-meta a {
+            color: #8cc1ff
+        }
+
+        body.dark .p-toc a {
+            background: #212121;
+            border-color: #333333;
+            color: #dcdcdc
+        }
+
+        body.dark .p-sec {
+            background: #212121;
+            border-color: #333333
+        }
+
+        body.dark .p-sec p {
+            color: #d0d0d0
+        }
+
+        body.dark .p-sec code {
+            background: #262626;
+            border-color: #333333;
+            color: #ececec
+        }
+
+        body.dark .p-tw {
+            border-color: #333333
+        }
+
+        body.dark .p-tbl th {
+            background: #262626;
+            border-color: #333333;
+            color: #a8a8a8
+        }
+
+        body.dark .p-tbl td {
+            border-color: #333333
+        }
+
+        body.dark .p-yn.p-y {
+            color: #6fd3a6
+        }
+
+        body.dark .p-yn.p-n {
+            color: #ff9c7a
+        }
+
+        body.dark .p-tree,
+        body.dark .p-ackwrap {
+            background: #262626;
+            border-color: #333333
+        }
+
+        body.dark .p-node {
+            background: #2c2c2c;
+            border-color: #3d3d3d;
+            color: #ececec
+        }
+
+        body.dark .p-node small,
+        body.dark .p-rings small {
+            color: #a8a8a8
+        }
+
+        body.dark .p-node.root {
+            background: #0b6e4f;
+            border-color: #0b6e4f;
+            color: #fff
+        }
+
+        body.dark .p-node.root small {
+            color: #d7efe4
+        }
+
+        body.dark .p-node.yes {
+            background: #1d2b24;
+            border-color: #2f6b51
+        }
+
+        body.dark .p-node.no {
+            background: #2b2312;
+            border-color: #7a5f22
+        }
+
+        body.dark .p-node.ask {
+            background: #13233a;
+            border-color: #345c8f
+        }
+
+        body.dark .p-node.show {
+            border-color: #4cc99a
+        }
+
+        body.dark .p-tag,
+        body.dark .p-steps li:not(.p-if)::before,
+        body.dark .p-ol li::before {
+            background: #1d2b24;
+            color: #6fd3a6
+        }
+
+        body.dark .p-brs::before,
+        body.dark .p-br::before {
+            border-color: #555555
+        }
+
+        body.dark .p-br::after {
+            border-color: #555555
+        }
+
+        body.dark .p-down {
+            background: #555555
+        }
+
+        body.dark .p-down::after {
+            border-top-color: #555555
+        }
+
+        body.dark .p-steps li {
+            border-color: #333333
+        }
+
+        body.dark .p-steps li.p-if {
+            color: #f0c062
+        }
+
+        body.dark .p-goto {
+            background: transparent;
+            border-color: #3d3d3d;
+            color: #6fd3a6
+        }
+
+        body.dark .p-goto:hover {
+            background: #262626
+        }
+
+        body.dark .p-rings::before {
+            background: #333333
+        }
+
+        body.dark .p-ring {
+            box-shadow: 0 0 0 4px #212121
+        }
+
+        body.dark .p-rings li>div,
+        body.dark .p-ol li {
+            background: #262626;
+            border-color: #333333;
+            color: #ececec
+        }
+
+        body.dark .p-ack {
+            background: #2c2c2c;
+            border-color: #3d3d3d
+        }
+
+        body.dark .p-ack p {
+            color: #d0d0d0
+        }
+
+        body.dark .p-ack .p-ack-t {
+            color: #ececec
+        }
+
+        body.dark .p-ack-i {
+            background: #1d2b24;
+            color: #6fd3a6
+        }
+
+        body.dark .p-ack-link {
+            color: #8cc1ff
+        }
+
+        body.dark .p-sec .p-then {
+            color: #a8a8a8
+        }
+
+        body.dark .b-trade {
+            background: #1d2b24;
+            color: #6fd3a6
+        }
+
+        body.dark .b-rel {
+            background: #13233a;
+            color: #8cc1ff
+        }
+
+        body.dark .b-walk {
+            background: #251b3a;
+            color: #c3a6ff
+        }
+
+        body.dark .b-state {
+            background: #2e2e2e;
+            color: #cfcfcf
+        }
+
+        body.dark .b-pay {
+            background: #2b2312;
+            color: #f0c062
+        }
+
+        body.dark .b-pop {
+            background: #331a12;
+            color: #ff9c7a
+        }
+
+        body.dark .tag.req {
+            background: #2b2312;
+            border-color: #7a5f22;
+            color: #f0c062
+        }
     </style>
 </head>
 
@@ -1996,29 +2862,243 @@
     <header class="head">
         <div class="headin">
             <div>
-                <p class="eyebrow">SHRAMIN · ISSUE #107 · FULL-FLOW LAYOUT STUDY</p>
-                <h1>Compare every step of the job-search flow</h1>
-                <p class="sub">One colorful ShramIN style · seven arrangements · all documented branches</p>
+                <p class="eyebrow">SHRAMIN · ISSUE #107 · NO / ZERO JOBS</p>
+                <h1>When there are few or no jobs</h1>
+                <p class="sub">The plan for lead review · every screen of the flow as a mockup</p>
             </div>
-            <div class="controls"><label class="control"><input id="topToggle" type="checkbox" checked> Show top
-                    bar</label><label class="control"><input id="bottomToggle" type="checkbox" checked> Show bottom
-                    bar</label></div>
+            <div class="headr">
+                <div class="views" role="tablist" aria-label="View">
+                    <button type="button" role="tab" data-view="plan" class="on" aria-selected="true">Plan</button>
+                    <button type="button" role="tab" data-view="mockup" aria-selected="false">Mockup</button>
+                </div>
+                <div class="views" id="planControls" role="group" aria-label="Theme">
+                    <button type="button" data-theme="light" data-ic="sun" aria-pressed="true" class="on">Light</button>
+                    <button type="button" data-theme="dark" data-ic="moon" aria-pressed="false">Dark</button>
+                </div>
+                <div class="controls hidden" id="mockupControls"><label class="control"><input id="topToggle" type="checkbox" checked> Show top
+                        bar</label><label class="control"><input id="bottomToggle" type="checkbox" checked> Show bottom
+                        bar</label></div>
+            </div>
         </div>
     </header>
     <main>
-        <div class="intro">
-            <div><strong>Same type, spacing, color and card style across every option.</strong>
-                <p>Each screen is a row. Compare seven structural layouts, then follow the tap targets through the
-                    plan’s trade, location and no-fit flows.</p>
+        <section id="view-plan">
+            <article class="p-doc">
+                <p class="p-kicker">PLAN · ISSUE #107</p>
+                <h1 class="p-title">#107 — No / zero jobs: problem, solution, and how it solves it</h1>
+                <p class="p-meta"><b>Issue:</b> <a href="https://github.com/blueberryeservices/shramin-careers-app-flutter/issues/107">#107</a> · <b>Status:</b> proposal for lead review</p>
+                <nav class="p-toc" aria-label="Plan sections">
+                    <a href="#s1">1 · The problem</a><a href="#s3">3 · The flow</a><a href="#s4">4 · The list</a><a href="#s5">5 · Related work</a><a href="#s6">6 · Rules</a><a href="#s7">7 · Decisions</a>
+                </nav>
+
+                <section class="p-sec" id="s1">
+                    <h2>1. The problem</h2>
+                    <p>After a candidate answers the one question (trade, or state → district), #107 promises: <b>“Tell us your work, see jobs that fit you.”</b> For many candidates the honest number of jobs for their trade and place is <b>small or zero</b>.</p>
+                    <div class="p-tw">
+                        <table class="p-tbl">
+                            <thead><tr><th>What goes wrong</th><th>What the candidate thinks</th></tr></thead>
+                            <tbody>
+                                <tr><td>Screen says “0 jobs” / “None in your district”</td><td>“This app isn’t for me” → leaves, uninstalls, replies STOP</td></tr>
+                                <tr><td>Screen shows random jobs from other kinds of work</td><td>“They didn’t listen to me” → worse than an empty screen</td></tr>
+                                <tr><td>A job is shown that they can’t apply for (no licence, no passport)</td><td>Wasted effort, and annoyed employers</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 id="s1-1">1.1 How big the problem is (production)</h3>
+                    <div class="p-tw">
+                        <table class="p-tbl">
+                            <thead><tr><th>Measure</th><th>Value</th></tr></thead>
+                            <tbody>
+                                <tr><td>Open jobs</td><td><b>289</b> (71% walk-ins), for about <b>3 lakh</b> eligible candidates</td></tr>
+                                <tr><td>Candidates per open Electrician job</td><td>about <b>1,200</b></td></tr>
+                                <tr><td>Candidates with <b>3+ jobs in their district</b></td><td><b>1.4%</b></td></tr>
+                                <tr><td>Candidates with <b>≥ 1 job in their state</b> (exact trade / + related work)</td><td><b>37.3% / 44.6%</b></td></tr>
+                                <tr><td>Candidates with <b>≥ 1 job anywhere in India</b> (exact trade / + related work)</td><td><b>73.0% / 79.1%</b></td></tr>
+                                <tr><td>Candidates with <b>no job for their work anywhere</b></td><td><b>~21%</b></td></tr>
+                                <tr><td>Location-question group (trade known): jobs in India, exact / + related</td><td><b>66% / 75%</b>. <b>5,358 (25%)</b> have nothing.</td></tr>
+                                <tr><td>Of those 5,358: <b>service trades</b> (Drivers, Security, Delivery, Warehouse, Cook, Housekeeping, Retail)</td><td><b>2,204 (41%)</b>, outside ShramIN’s skilled-trade scope</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="p-sec" id="s3">
+                    <h2>3. The flow (block view)</h2>
+
+                    <h3 id="s3-1">3.1 Trade known, no location yet</h3>
+                    <div class="p-tree">
+                        <div class="p-node root"><b>TRADE</b><small>trade known, no location yet</small></div>
+                        <div class="p-brs">
+                            <div class="p-br">
+                                <div class="p-node yes"><b>Jobs found in the trade</b><small>across India</small></div>
+                                <div class="p-down"></div>
+                                <div class="p-node show"><span class="p-tag">SHOW</span><b>“51 Fitter jobs across India for you”</b><small>cards show city</small><small>+ hint “Add your district for jobs near you”</small></div>
+                            </div>
+                            <div class="p-br">
+                                <div class="p-node no"><b>No jobs available in trade</b></div>
+                                <div class="p-down"></div>
+                                <ol class="p-node p-steps">
+                                    <li><b>Related work (wider)</b><small>reviewed groups only</small></li>
+                                    <li><b>Walk-in interviews</b><small>only once their area is known, otherwise hidden</small></li>
+                                    <li><b>High-paying jobs</b></li>
+                                    <li><b>Popular jobs</b></li>
+                                    <li class="p-if">If 1 is empty: acknowledgement + job alert (§3.5)</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="p-goto" data-show="b1" data-ica="chev">See it in the mockup · rows 2–4</button>
+
+                    <h3 id="s3-2">3.2 Trade and location known</h3>
+                    <div class="p-tree">
+                        <div class="p-node root"><b>TRADE + LOCATION</b></div>
+                        <div class="p-brs">
+                            <div class="p-br">
+                                <div class="p-node yes"><b>Found 3+ jobs near them</b><small>circle 1: district</small><small>circle 2: nearby districts (later)</small><small>circle 3: state</small></div>
+                                <div class="p-down"></div>
+                                <div class="p-node show"><span class="p-tag">SHOW CARDS</span><b>“12 Fitter jobs for you in Pune”</b><small>+ walk-ins in that area</small><small>+ high-paying</small><small>+ popular (extras)</small></div>
+                            </div>
+                            <div class="p-br">
+                                <div class="p-node no"><b>Not found near them</b><small>fewer than 3</small></div>
+                                <div class="p-down"></div>
+                                <div class="p-node ask"><b>India level (circle 4)</b><small>same trade, other states</small><small>only if open to relocating</small><small>one tap: “Open to working in another state?”</small></div>
+                                <div class="p-down"></div>
+                                <div class="p-node"><b>IF related jobs exist → show first</b><small>circle 5: related, district</small><small>circle 6: related, wider (wider only with consent)</small></div>
+                                <div class="p-down"></div>
+                                <div class="p-node"><b>Walk-in interviews</b><small>ONLY in that area (district / state)</small></div>
+                                <div class="p-down"></div>
+                                <div class="p-node"><b>High-paying jobs</b></div>
+                                <div class="p-down"></div>
+                                <div class="p-node"><b>Popular jobs</b></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="p-goto" data-show="c1" data-ica="chev">See it in the mockup · rows 7–10</button>
+
+                    <h3 id="s3-3">3.3 Before anything: is the trade in scope?</h3>
+                    <div class="p-tree">
+                        <div class="p-node root"><b>Candidate’s trade</b></div>
+                        <div class="p-brs">
+                            <div class="p-br">
+                                <div class="p-node yes"><b>Skilled / technical trade</b><small>Electrician, Fitter, Welder, Machinist, AC, …</small></div>
+                                <div class="p-down"></div>
+                                <div class="p-node show"><b>Flows 3.1 / 3.2</b></div>
+                            </div>
+                            <div class="p-br">
+                                <div class="p-node no"><b>Service trade</b><small>Driver, Security, Delivery, Warehouse, Cook, Housekeeping, Retail</small></div>
+                                <div class="p-down"></div>
+                                <div class="p-node"><b>Existing “save your interest” flow</b><small>no “see jobs” promise</small></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="p-goto" data-show="d1" data-ica="chev">See it in the mockup · row 11</button>
+
+                    <h3 id="s3-4">3.4 The widening circles (search order)</h3>
+                    <div class="p-legend"><span class="bdg b-trade">Same trade · circles 1–4</span><span class="bdg b-rel">Closely related work · circles 5–6</span></div>
+                    <ol class="p-rings">
+                        <li><span class="p-ring">1</span><div><b>Same trade · same district</b></div></li>
+                        <li><span class="p-ring">2</span><div><b>Same trade · nearby districts they can reach</b><small>later: needs distance data</small></div></li>
+                        <li><span class="p-ring">3</span><div><b>Same trade · elsewhere in the state</b></div></li>
+                        <li><span class="p-ring">4</span><div><b>Same trade · elsewhere in India</b><small>only if open to relocating</small></div></li>
+                        <li class="r"><span class="p-ring">5</span><div><b>Closely related work · same district</b></div></li>
+                        <li class="r"><span class="p-ring">6</span><div><b>Closely related work · wider area</b><small>wider only with consent</small></div></li>
+                    </ol>
+                    <p><b>Stop when there are enough suitable jobs</b> (default 3, configurable). <b>Ask before going wider</b> whenever it changes the commute or needs relocation.</p>
+
+                    <h3 id="s3-5">3.5 When nothing fits: acknowledgement + job alert</h3>
+                    <div class="p-ackwrap">
+                        <div class="p-ack">
+                            <span class="p-ack-i" data-ic="tick:24"></span>
+                            <p class="p-ack-t">Saved: Fitter · Pune</p>
+                            <p>Employers looking for Fitters can now find you.</p>
+                            <p>Fitter jobs open up often.</p>
+                            <span class="p-ack-btn" data-ic="bell:20">WhatsApp me when Fitter jobs open</span>
+                            <span class="p-ack-link" data-ica="arrow">12 top-paying jobs hiring now</span>
+                        </div>
+                        <p class="p-then">then: high-paying → popular → ranked Jobs tab</p>
+                    </div>
+                    <p>The job alert reuses the existing WhatsApp job-alert template (<code>candidate_job_alert_notification</code>) and needs <code>whats_app_consent</code>.</p>
+                    <button type="button" class="p-goto" data-show="b4" data-ica="chev">See it in the mockup · rows 4 and 10</button>
+                </section>
+
+                <section class="p-sec" id="s4">
+                    <h2>4. The list the candidate sees (sections)</h2>
+                    <div class="p-tw">
+                        <table class="p-tbl">
+                            <thead><tr><th>Order</th><th>Section</th><th>Source (live)</th><th>Badge</th><th>Counts in “jobs for you”?</th></tr></thead>
+                            <tbody>
+                                <tr><td>1</td><td><b>Your work near you</b></td><td>Same trade + Any Trade, district then state (+ Any Location)</td><td><span class="bdg b-trade" data-ic="check:14">Your trade</span></td><td><span class="p-yn p-y" data-ic="tick">Yes</span></td></tr>
+                                <tr><td>2</td><td><b>Walk-in interviews near you this week</b></td><td>Walk-ins with a <b>real location</b> in their district/state; same trade, reviewed group or Any Trade; ≥ 6 h left; closing within 7 days</td><td><span class="bdg b-walk" data-ic="cal:14">Walk-in</span> · date, time</td><td><span class="p-yn p-y" data-ic="tick">Yes</span></td></tr>
+                                <tr><td>3</td><td><b>Related work</b></td><td>Reviewed group, district first; wider only with consent</td><td><span class="bdg b-rel" data-ic="link:14">Related work</span> + reason</td><td><span class="p-yn p-y" data-ic="tick">Yes</span></td></tr>
+                                <tr><td>4</td><td><b>Your work in other states</b></td><td>Same trade across India, <b>only after “Yes”</b> (Flow 3.2), or by default in Flow 3.1</td><td><span class="bdg b-state" data-ic="pin:14">City</span></td><td><span class="p-yn p-y" data-ic="tick">Yes, when 1–3 are empty</span></td></tr>
+                                <tr><td>5</td><td><b>High-paying jobs</b> <i>(extra)</i></td><td>Top salary bands, trade/group first</td><td><span class="bdg b-pay" data-ic="trend:14">High pay</span></td><td><span class="p-yn p-n" data-ic="x">No, own label</span></td></tr>
+                                <tr><td>6</td><td><b>Popular jobs</b> <i>(extra)</i></td><td>Most real applications in the last 7 days, trade/group first</td><td><span class="bdg b-pop" data-ic="flame:14">Popular</span></td><td><span class="p-yn p-n" data-ic="x">No, own label</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p><b>When related work exists in the “not found near them” branch, it’s shown first</b>, as in §3.2. The exact order is a config value.</p>
+                    <button type="button" class="p-goto" data-show="e1" data-ica="chev">See every card in the mockup · row 12</button>
+                </section>
+
+                <section class="p-sec" id="s5">
+                    <h2>5. Related work: reviewed groups (validate before use)</h2>
+                    <p>These are <b>candidate relationships to validate, not automatic equivalences.</b> Some trades have only generic skill labels, which prove nothing: Drivers and Delivery Executive share only “customer service” and “safety awareness”, so they are <b>not</b> linked.</p>
+                    <div class="p-tw">
+                        <table class="p-tbl">
+                            <thead><tr><th>Group</th><th>Trades (IDs)</th><th>Reason shown</th></tr></thead>
+                            <tbody>
+                                <tr><td><b>Electrical</b></td><td>Electrician (1), Wireman (1208), Electrician Power (18675), Solar Technician Electrical (18732), Solar Panel Installation (1236), Electrical Engineering (1225), <b>+ EEE</b> (id ?)</td><td>Uses electrical wiring and installation skills</td></tr>
+                                <tr><td><b>AC &amp; refrigeration</b></td><td>AC Technician (4), R&amp;AC Technician (108), Mechanic R&amp;AC (1216), RAC CAC (116), HVAC Technician (18692)</td><td>Uses AC and refrigeration skills</td></tr>
+                                <tr><td><b>Welding &amp; fabrication</b></td><td>Welder (112), Fabrication (109), Welding Fabrication &amp; Fitting (18746), Welding GMAW &amp; GTAW (18747), Welding Pipe (18749), Welding Structural (18750)</td><td>Uses welding skills</td></tr>
+                                <tr><td><b>Machining</b></td><td>Machine Operator (22), Machinist (1218), Tool &amp; Die Maker (1201), Mechanic Machine Tool Maintenance (1174), CNC Programmer Operator (id ?), Turner (113), <b>+ Machinist Grinder</b> (id ?)</td><td>Uses machine and tool skills</td></tr>
+                                <tr><td><b>Mechanical fitting</b></td><td>Fitter (7), Fitter (Automotive) (19)</td><td>Uses fitting and assembly skills</td></tr>
+                                <tr><td><b>Automotive</b></td><td>Automobile Technician (12), Mechanic Motor Vehicle (1217), Mechanic Diesel (1213), Fitter (Automotive) (19), Driver Cum Mechanic (18672)</td><td>Uses vehicle repair skills</td></tr>
+                                <tr><td><b>Painting</b></td><td>Painter General (1210), Domestic Painter (18671), Industrial Painter (18694), Paints and Coating (594)</td><td>Uses painting skills</td></tr>
+                                <tr><td><b>Carpentry</b></td><td>Carpenter (3), Wood Work Technician (18752), Fitter (Furniture) (18)</td><td>Uses woodwork skills</td></tr>
+                                <tr><td><b>Computer</b></td><td>COPA (115), Data Entry Operator (id ?), Information Technology (IT) (id ?)</td><td>Uses computer skills</td></tr>
+                                <tr><td><b>Driving</b></td><td>Drivers (15), Driver Cum Mechanic (18672)</td><td>Uses driving skills</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p><b>To review as well:</b> Multi Skilled Technician (Electrical or a new “Maintenance” group), Mechanical Engineering ↔ Mechanical (528) (check the education level), Electronics Engineering ↔ Electronics Mechanic (106).</p>
+                    <p><b>Measured value:</b> reviewed groups lift coverage by <b>+7 points (state)</b> and <b>+6 points (India)</b>, and by <b>+9 points</b> in the location-question group.</p>
+                </section>
+
+                <section class="p-sec" id="s6">
+                    <h2>6. Rules that apply everywhere</h2>
+                    <ol class="p-ol">
+                        <li><b>Never</b> show “0 jobs”, “none”, “not found” or “None in {area}”.</li>
+                        <li><b>“Jobs for you” counts only relevant jobs</b> (same trade, related work, walk-ins near them). High-paying and popular jobs get <b>their own label</b> (“12 top-paying jobs hiring now”), never “for you”.</li>
+                        <li><b>Every card shows its real place</b> and a badge: <span class="bdg b-trade" data-ic="check:14">Your trade</span> <span class="bdg b-rel" data-ic="link:14">Related work</span> <span class="bdg b-walk" data-ic="cal:14">Walk-in</span> <span class="bdg b-pay" data-ic="trend:14">High pay</span> <span class="bdg b-pop" data-ic="flame:14">Popular</span></li>
+                        <li><b>Eligibility guard:</b> hide a job only when both sides are known and clearly don’t match (licence, passport, experience, education). Otherwise show it with a requirement tag (<span class="tag req">Needs bike + DL</span>).</li>
+                        <li><b>Ask before going wider</b> when it changes the commute or needs relocation. “Anywhere in India” on the location question counts as yes.</li>
+                        <li><b>Counting rules:</b> approved, active, <code>expiry_date &gt; now()</code>, walk-ins with ≥ 6 h left, duplicates counted once, jobs already applied to excluded, “Any Trade” counted only near the candidate (never as “{n} {trade} jobs across India”).</li>
+                        <li><b>The count and the list match</b>: same request, same filters, same moment.</li>
+                        <li><b>The message never contains a number.</b> Jobs churn within days.</li>
+                    </ol>
+                </section>
+
+               
+                </section>
+            </article>
+        </section>
+
+        <section id="view-mockup" class="hidden">
+            <div class="intro">
+                <div><strong>Compare every step of the job-search flow.</strong>
+                    <p>Same type, spacing, color and card style in every option. Each screen is a row: compare seven layouts, then
+                        follow the tap targets through the plan’s trade, location and no-fit flows.</p>
+                </div>
+                <div class="key"><span>Trade → suggestions → location → results</span><span>Phone viewport 390 × 844</span>
+                </div>
             </div>
-            <div class="key"><span>Trade → suggestions → location → results</span><span>Phone viewport 390 × 844</span>
-            </div>
-        </div>
-        <nav class="anchors" id="anchors"></nav>
-        <div id="board"></div>
-        <footer class="foot">ShramIN brand colors and supplied navigation icons are used in every mockup. Widening
-            requires consent; walk-ins require a known, matching area; extras keep their own labels and never count as
-            jobs for you.</footer>
+            <nav class="anchors" id="anchors"></nav>
+            <div id="board"></div>
+            <footer class="foot">ShramIN brand colors and supplied navigation icons are used in every mockup. Widening
+                requires consent; walk-ins require a known, matching area; extras keep their own labels and never count as
+                jobs for you.</footer>
+        </section>
     </main>
     <script>
 
@@ -2241,6 +3321,34 @@
         document.addEventListener('input', e => { if (e.target.matches('[data-search]')) { const q = e.target.value.toLowerCase(); e.target.closest('.sheet, .screen').querySelectorAll('.opt, .tile').forEach(x => x.classList.toggle('hidden', !x.textContent.toLowerCase().includes(q))) } });
         function chrome() { document.querySelectorAll('.phone').forEach(p => { p.querySelector('.appbar').classList.toggle('hidden', !document.querySelector('#topToggle').checked); p.querySelector('.bottom').classList.toggle('hidden', !document.querySelector('#bottomToggle').checked) }) }
         document.querySelector('#topToggle').addEventListener('change', chrome); document.querySelector('#bottomToggle').addEventListener('change', chrome);
+
+        /* Plan / Mockup switch: Plan is the default; #mockup or a row id opens the mockup */
+        P.sun = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>';
+        P.moon = '<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>';
+        let theme = 'light';
+        try { theme = localStorage.getItem('plan-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') } catch (e) { }
+        function paint() {
+            document.body.classList.toggle('dark', theme === 'dark' && !document.getElementById('view-plan').classList.contains('hidden'));
+            document.querySelectorAll('[data-theme]').forEach(b => { b.classList.toggle('on', b.dataset.theme === theme); b.setAttribute('aria-pressed', b.dataset.theme === theme) });
+        }
+        document.querySelectorAll('[data-ic]').forEach(e => { const [n, s] = e.dataset.ic.split(':'); e.insertAdjacentHTML('afterbegin', ic(n, +s || 16)) });
+        document.querySelectorAll('[data-ica]').forEach(e => { const [n, s] = e.dataset.ica.split(':'); e.insertAdjacentHTML('beforeend', ic(n, +s || 16)) });
+        function view(v, row) {
+            document.querySelectorAll('[data-view]').forEach(b => { b.classList.toggle('on', b.dataset.view === v); b.setAttribute('aria-selected', b.dataset.view === v) });
+            ['plan', 'mockup'].forEach(x => document.getElementById('view-' + x).classList.toggle('hidden', x !== v));
+            document.getElementById('mockupControls').classList.toggle('hidden', v !== 'mockup');
+            document.getElementById('planControls').classList.toggle('hidden', v !== 'plan');
+            paint();
+            const r = row && document.getElementById(row); if (r) r.scrollIntoView({ block: 'start' }); else window.scrollTo(0, 0);
+        }
+        document.addEventListener('click', e => {
+            const th = e.target.closest('[data-theme]'); if (th) { theme = th.dataset.theme; try { localStorage.setItem('plan-theme', theme) } catch (err) { } paint(); return }
+            const b = e.target.closest('[data-view]'); if (b) { view(b.dataset.view); history.replaceState(null, '', '#' + b.dataset.view); return }
+            const s = e.target.closest('[data-show]'); if (s) { view('mockup', s.dataset.show); history.replaceState(null, '', '#' + s.dataset.show) }
+        });
+        const start = location.hash.slice(1), target = start && document.getElementById(start);
+        if (start === 'mockup' || (target && target.closest('#view-mockup'))) view('mockup', start === 'mockup' ? '' : start);
+        paint();
     </script>
 </body>
 
